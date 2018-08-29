@@ -22,15 +22,11 @@ class Step_One:
         self.bframe.pack()
 
         self.title=Label(self.tframe,font=('ariel',15),text="Step - 1",relief='ridge')
-        self.title.grid(row=0,column=0)
-        self.title=Label(self.tframe,font=('ariel',15),text="                                              ")
-        self.title.grid(row=0,column=1)
+        self.title.grid(row=0,column=0,padx=120, pady=10)
         self.title=Label(self.tframe,font=('ariel',15),text="Mandalay Hill Contest",relief='ridge')
-        self.title.grid(row=0,column=2)
-        self.title=Label(self.tframe,font=('ariel',15),text="                                                    ")
-        self.title.grid(row=0,column=3)
+        self.title.grid(row=0,column=1,padx=120, pady=10)
         self.title=Label(self.tframe,font=('ariel',15),text="Photo Number- ",relief='ridge')
-        self.title.grid(row=0,column=4)
+        self.title.grid(row=0,column=2,padx=120, pady=10)
 
         self.l1=Label(self.mframe,font=('ariel',80,'bold'),padx=180,pady=80,textvariable=self.t1,relief='solid')
         self.l1.bind("<Key>",self.key)
