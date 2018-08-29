@@ -58,14 +58,11 @@ class Step_One:
         self.l6.focus_set() 
         self.l6.grid(row=1,column=2)
 
-        self.lb= Label(self.bframe,text="                       ")
-        self.lb.grid(row=0,column=0)
+
         self.b1= Button(self.bframe,text="Pause")
-        self.b1.grid(row=1,column=0)
-        self.lb= Label(self.bframe,text="                       ")
-        self.lb.grid(row=1,column=1)
+        self.b1.grid(row=0,column=0,padx=120, pady=10)
         self.b2= Button(self.bframe,text="Continue")
-        self.b2.grid(row=1,column=2)
+        self.b2.grid(row=0,column=1,padx=120, pady=10)
 
     def key(self,event):     
         if(event.char=='q' or event.char=='Q'):
