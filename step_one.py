@@ -14,7 +14,7 @@ class Step_One:
         self.t4=StringVar()
         self.t5=StringVar()
         self.sum=StringVar()
-#basic frames
+#base frames
 
         self.tframe= Frame(master)
         self.tframe.pack()
