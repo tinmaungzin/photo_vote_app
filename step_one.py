@@ -1,5 +1,6 @@
 from tkinter import *
 
+
 class Step_One:
     
     
@@ -13,20 +14,23 @@ class Step_One:
         self.t4=StringVar()
         self.t5=StringVar()
         self.sum=StringVar()
-        
+#basic frames
+
         self.tframe= Frame(master)
         self.tframe.pack()
         self.mframe= Frame(master)
         self.mframe.pack()
         self.bframe= Frame(master)
         self.bframe.pack()
+#top frame for step number ... etc 
 
         self.title=Label(self.tframe,font=('ariel',15),text="Step - 1",relief='ridge')
         self.title.grid(row=0,column=0,padx=120, pady=10)
         self.title=Label(self.tframe,font=('ariel',15),text="Mandalay Hill Contest",relief='ridge')
         self.title.grid(row=0,column=1,padx=120, pady=10)
         self.title=Label(self.tframe,font=('ariel',15),text="Photo Number- ",relief='ridge')
-        self.title.grid(row=0,column=2,padx=120, pady=10)
+        self.title.grid(row=0,column=3,padx=120, pady=10)
+#mid frame for Labels to fit voting results
 
         self.l1=Label(self.mframe,font=('ariel',80,'bold'),padx=180,pady=80,textvariable=self.t1,relief='solid')
         self.l1.bind("<Key>",self.key)
@@ -58,12 +62,13 @@ class Step_One:
         self.l6.focus_set() 
         self.l6.grid(row=1,column=2)
 
-
+#bottom frame for buttons      
         self.b1= Button(self.bframe,text="Pause")
         self.b1.grid(row=0,column=0,padx=120, pady=10)
+        
         self.b2= Button(self.bframe,text="Continue")
         self.b2.grid(row=0,column=1,padx=120, pady=10)
-
+# key binding 
     def key(self,event):     
         if(event.char=='q' or event.char=='Q'):
             self.t1.set(1)      
@@ -101,7 +106,6 @@ def main():
     root.geometry("1600x800+0+0")
     root.title("Photo Voting")
     s1=Step_One(root)
-    # root.resizable(False,False)
     root.mainloop()
 
 if __name__ == '__main__':
